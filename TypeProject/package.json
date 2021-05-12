@@ -9,6 +9,7 @@
   "dependencies": {
     "@types/multer": "^1.4.5",
     "@types/uuid": "^8.3.0",
+    "csv-parse": "^4.15.4",
     "eslint": "^7.26.0",
     "eslint-config-prettier": "^8.3.0",
     "eslint-plugin-prettier": "^3.4.0",
