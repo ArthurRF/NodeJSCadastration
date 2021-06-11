@@ -18,8 +18,9 @@ services:
         container_name: rentx
         ports: 
             - 3333:3333
+            - 9229:9229     # Debugger
         volumes: 
-            - .:/Users/55479/Desktop/Dev
+            - .:/usr/app
         links:
             - database_ignite
         depends_on: 
