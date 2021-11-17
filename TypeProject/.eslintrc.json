@@ -42,8 +42,16 @@
         "no-console": "off",
         "no-useless-constructor": "off",
         "no-empty-function": "off",
+        "no-empty": "off",
         "lines-between-class-members": "off",
+        "javascript.format.insertSpaceAfterOpeningAndBeforeClosingEmptyBraces": false,
+        "typescript.format.insertSpaceAfterOpeningAndBeforeClosingEmptyBraces": false,
+        "prettier.bracketSpacing": false,
         "prettier/prettier": "error",
+        "object-curly-spacing": [
+            "error",
+            "always"
+        ],
         "import/extensions": [
             "error",
             "ignorePackages",
