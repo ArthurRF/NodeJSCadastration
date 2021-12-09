@@ -5,67 +5,67 @@ import { getRepository, Repository } from "typeorm";
 import { Rental } from "../entities/Rental";
 
 class RentalsRepository implements IRentalsRepository {
-    private repository: Repository<Rental>;
+  private repository: Repository<Rental>;
 
-    constructor() {
-        this.repository = getRepository(Rental);
-    }
+  constructor() {
+    this.repository = getRepository(Rental);
+  }
 
-    async findOpenRentalByCar(car_id: string): Promise<Rental> {
-        const openByCar = await this.repository.findOne({
-            where: {
-                car_id,
-                end_date: null
-            }
-        });
-        return openByCar;
-    }
-
-    async findOpenRentalByUser(user_id: string): Promise<Rental> {
-        const openByUser = await this.repository.findOne({
-            where: {
-                user_id,
-                end_date: null
-            }
-        });
-        return openByUser;
-    }
-
-    async create({
+  async findOpenRentalByCar(car_id: string): Promise<Rental> {
+    const openByCar = await this.repository.findOne({
+      where: {
         car_id,
-        expected_return_date,
+        end_date: null
+      }
+    });
+    return openByCar;
+  }
+
+  async findOpenRentalByUser(user_id: string): Promise<Rental> {
+    const openByUser = await this.repository.findOne({
+      where: {
         user_id,
-        id,
-        end_date,
-        total
-    }: ICreateRentalDTO): Promise<Rental> {
-        const rental = this.repository.create({
-            car_id,
-            expected_return_date,
-            user_id,
-            id,
-            end_date,
-            total
-        });
+        end_date: null
+      }
+    });
+    return openByUser;
+  }
 
-        await this.repository.save(rental);
+  async create({
+    car_id,
+    expected_return_date,
+    user_id,
+    id,
+    end_date,
+    total
+  }: ICreateRentalDTO): Promise<Rental> {
+    const rental = this.repository.create({
+      car_id,
+      expected_return_date,
+      user_id,
+      id,
+      end_date,
+      total
+    });
 
-        return rental;
-    }
+    await this.repository.save(rental);
 
-    async findById(id: string): Promise<Rental> {
-        const rental = await this.repository.findOne(id);
-        return rental;
-    }
+    return rental;
+  }
 
-    async findByUser(user_id: string): Promise<Rental[]> {
-        const rentals = await this.repository.find({
-            where: { user_id },
-            relations: ["car"]
-        });
+  async findById(id: string): Promise<Rental> {
+    const rental = await this.repository.findOne(id);
+    return rental;
+  }
 
-        return rentals;
-    }
+  async findByUser(user_id: string): Promise<Rental[]> {
+    const rentals = await this.repository.find({
+      where: { user_id },
+      relations: ["car"]
+    });
+
+    return rentals;
+  }
 }
 
 export { RentalsRepository };
