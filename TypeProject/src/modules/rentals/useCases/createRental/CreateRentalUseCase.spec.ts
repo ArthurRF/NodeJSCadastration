@@ -26,9 +26,19 @@ describe("Create Rental", () => {
     });
 
     it("Should be able to create a new rental", async () => {
+        const car = await carsRepositoryInMemory.create({
+            name: "Fusca",
+            description: "Ford Fusca",
+            daily_rate: 100,
+            license_plate: "ABC-1234",
+            fine_amount: 10,
+            category_id: '1234',
+            brand: 'Ford',
+        });
+
         const rental = await createRentalUseCase.execute({
             user_id: "12344",
-            car_id: "11122",
+            car_id: car.id,
             expected_return_date: dayAdd24Hours,
         });
 
