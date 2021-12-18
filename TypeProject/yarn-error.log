@@ -1,5 +1,5 @@
 Arguments: 
-  C:\Program Files\nodejs\node.exe C:\Users\55479\AppData\Roaming\npm\node_modules\yarn\bin\yarn.js add nodemailer
+  C:\Program Files\nodejs\node.exe C:\Users\55479\AppData\Roaming\npm\node_modules\yarn\bin\yarn.js add @types/nodemailer -D
 
 PATH: 
   C:\Program Files\Common Files\Oracle\Java\javapath;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\Program Files\Git\cmd;C:\Program Files\nodejs\;C:\Program Files\Docker\Docker\resources\bin;C:\ProgramData\DockerDesktop\version-bin;C:\Users\55479\AppData\Local\Microsoft\WindowsApps;;C:\Users\55479\AppData\Local\Programs\Microsoft VS Code\bin;C:\Users\55479\AppData\Roaming\npm
@@ -45,6 +45,7 @@ npm manifest:
           "jest": "^27.0.6",
           "jsonwebtoken": "^8.5.1",
           "multer": "^1.4.2",
+          "nodemailer": "^6.7.2",
           "pg": "^8.6.0",
           "prettier": "^2.2.1",
           "reflect-metadata": "^0.1.13",
@@ -3494,6 +3495,11 @@ Lockfile:
     version "1.1.73"
     resolved "https://registry.yarnpkg.com/node-releases/-/node-releases-1.1.73.tgz#dd4e81ddd5277ff846b80b52bb40c49edf7a7b20"
     integrity sha512-uW7fodD6pyW2FZNZnp/Z3hvWKeEW1Y8R1+1CnErE8cXFXzl5blBOoVB41CvMer6P6Q0S5FXDwcHgFd1Wj0U9zg==
+  
+  nodemailer@^6.7.2:
+    version "6.7.2"
+    resolved "https://registry.yarnpkg.com/nodemailer/-/nodemailer-6.7.2.tgz#44b2ad5f7ed71b7067f7a21c4fedabaec62b85e0"
+    integrity sha512-Dz7zVwlef4k5R71fdmxwR8Q39fiboGbu3xgswkzGwczUfjp873rVxt1O46+Fh0j1ORnAC6L9+heI8uUpO6DT7Q==
   
   normalize-package-data@^2.3.2:
     version "2.5.0"
