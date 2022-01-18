@@ -26,7 +26,7 @@ jobs:
 
       - uses: appleboy/scp-action@master
         with:
-          host: 172.31.91.76
+          host: 184.72.101.131
           username: ${{ secrets.SSH_USER }}
           port: 22
           key: ${{ secrets.SSH_KEY }}
